@@ -1,4 +1,4 @@
-class Person {
+class OtherPerson {
 	constructor(firstName, lastName, dob) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -24,10 +24,10 @@ class Person {
 	}
 }
 
-const mary = new Person('Mary', 'Williams', '11-13-1980');
+const anne = new OtherPerson('Anne', 'Williams', '11-13-1980');
 
-mary.getsMarried('Thompson');
+anne.getsMarried('Thompson');
 
-console.log(mary);
+console.log(anne);
 
-console.log(Person.addNumbers(1, 2));
+console.log(OtherPerson.addNumbers(1, 2));

@@ -1,4 +1,4 @@
-class Person {
+class MyPerson {
 	constructor(firstName, lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -9,7 +9,7 @@ class Person {
 	}
 }
 
-class Customer extends Person {
+class Buyer extends MyPerson {
 	constructor(firstName, lastName, phone, membership) {
 		super(firstName, lastName);
 
@@ -22,8 +22,8 @@ class Customer extends Person {
 	}
 }
 
-const john = new Customer('John', 'Doe', '555-555-5555', 'Standard');
+const mike = new Buyer('Mike', 'Doe', '555-555-5555', 'Standard');
 
-console.log(john.greeting());
+console.log(mike.greeting());
 
-console.log(Customer.getMembershipCost());
+console.log(Buyer.getMembershipCost());

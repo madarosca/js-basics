@@ -33,11 +33,11 @@ console.log(names.next());
 
 // ID Creator
 function* createIds(number) {
-  let index = 1;
+	let index = 1;
 
-  while(index <= number) {
-    yield index++;
-  }
+	while (index <= number) {
+		yield index++;
+	}
 }
 
 const gen = createIds(5);

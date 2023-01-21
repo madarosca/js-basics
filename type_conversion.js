@@ -1,39 +1,39 @@
-let val;
+let example;
 
 // Number to string
-val = String(555);
-val = String(4 + 4);
+example = String(555);
+example = String(4 + 4);
 // Bool to string
-val = String(true);
+example = String(true);
 // Date to string
-val = String(new Date());
+example = String(new Date());
 // Array to string
-val = String([1, 2, 3, 4]);
+example = String([1, 2, 3, 4]);
 
 // toString()
-val = (5).toString();
-val = true.toString();
+example = (5).toString();
+example = true.toString();
 
 // String to number
-val = Number('5');
-val = Number(true);
-val = Number(false);
-val = Number(null);
-val = Number('hello');
-val = Number([1, 2, 3]);
+example = Number('5');
+example = Number(true);
+example = Number(false);
+example = Number(null);
+example = Number('hello');
+example = Number([1, 2, 3]);
 
-val = parseInt('100.30');
-val = parseFloat('100.30');
+example = parseInt('100.30');
+example = parseFloat('100.30');
 
 // Output
-// console.log(val);
-// console.log(typeof val);
-// //console.log(val.length);
-// console.log(val.toFixed(2));
+// console.log(example);
+// console.log(typeof example);
+// //console.log(example.length);
+// console.log(example.toFixed(2));
 
-const val1 = String(5);
-const val2 = 6;
-const sum = Number(val1 + val2);
+const example1 = String(5);
+const example2 = 6;
+const sum = Number(example1 + example2);
 
 console.log(sum);
 console.log(typeof sum);

@@ -14,26 +14,26 @@
 //   console.log('NO');
 // }
 
-let val;
+let myVal;
 
 // Outter height and width
-val = window.outerHeight;
-val = window.outerWidth;
+myVal = window.outerHeight;
+myVal = window.outerWidth;
 
 // Inner height and width
-val = window.innerHeight;
-val = window.innerWidth;
+myVal = window.innerHeight;
+myVal = window.innerWidth;
 
 // Scroll points
-val = window.scrollY;
-val = window.scrollX;
+myVal = window.scrollY;
+myVal = window.scrollX;
 
 // Location Object
-val = window.location;
-val = window.location.hostname;
-val = window.location.port;
-val = window.location.href;
-val = window.location.search;
+myVal = window.location;
+myVal = window.location.hostname;
+myVal = window.location.port;
+myVal = window.location.href;
+myVal = window.location.search;
 
 // Redirect
 //window.location.href = 'http://google.com';
@@ -43,15 +43,15 @@ val = window.location.search;
 // History Object
 
 // window.history.go(-2);
-// val = window.history.length;
+// myVal = window.history.length;
 
 // Navigator Object
-val = window.navigator;
-val = window.navigator.appName;
-val = window.navigator.appVersion;
-val = window.navigator.userAgent;
-val = window.navigator.platform;
-val = window.navigator.vendor;
-val = window.navigator.language;
+myVal = window.navigator;
+myVal = window.navigator.appName;
+myVal = window.navigator.appVersion;
+myVal = window.navigator.userAgent;
+myVal = window.navigator.platform;
+myVal = window.navigator.vendor;
+myVal = window.navigator.language;
 
-console.log(val);
+console.log(myVal);

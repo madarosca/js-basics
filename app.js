@@ -17,3 +17,7 @@ function include(filePath) {
 // include('sub_classes.js');
 // include('type_conversion.js');
 // include('window_object.js');
+// include('symbols.js');
+// include('destructuring.js');
+// include('es6_maps.js');
+include('es6_sets.js');

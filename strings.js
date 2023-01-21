@@ -4,58 +4,58 @@ const age = 36;
 const str = 'Hello there my name is Brad';
 const tags = 'web design,web development,programming';
 
-let val;
+let value;
 
-val = firstName + lastName;
+value = firstName + lastName;
 
 // Concatenation
-val = firstName + ' ' + lastName;
+value = firstName + ' ' + lastName;
 
 // Append
-val = 'Brad ';
-val += 'Traversy';
+value = 'Brad ';
+value += 'Traversy';
 
-val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+value = 'Hello, my name is ' + firstName + ' and I am ' + age;
 
 // Escaping
-val = "That's awesome, I can't wait";
+value = "That's awesome, I can't wait";
 
 // Length
-val = firstName.length;
+value = firstName.length;
 
 // concat()
-val = firstName.concat(' ', lastName);
+value = firstName.concat(' ', lastName);
 
 // Change case
-val = firstName.toUpperCase();
-val = firstName.toLowerCase();
+value = firstName.toUpperCase();
+value = firstName.toLowerCase();
 
-val = firstName[2];
+value = firstName[2];
 
 // indexOf()
-val = firstName.indexOf('l');
-val = firstName.lastIndexOf('l');
+value = firstName.indexOf('l');
+value = firstName.lastIndexOf('l');
 
 // charAt()
-val = firstName.charAt('2');
+value = firstName.charAt('2');
 // Get last char
-val = firstName.charAt(firstName.length - 1);
+value = firstName.charAt(firstName.length - 1);
 
 // substring()
-val = firstName.substring(0, 4);
+value = firstName.substring(0, 4);
 
 // slice()
-val = firstName.slice(0, 4);
-val = firstName.slice(-3);
+value = firstName.slice(0, 4);
+value = firstName.slice(-3);
 
 // split()
-val = str.split(' ');
-val = tags.split(',');
+value = str.split(' ');
+value = tags.split(',');
 
 // replace()
-val = str.replace('Brad', 'Jack');
+value = str.replace('Brad', 'Jack');
 
 // includes()
-val = str.includes('foo');
+value = str.includes('foo');
 
-console.log(val);
+console.log(value);

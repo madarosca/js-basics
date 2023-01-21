@@ -1,27 +1,27 @@
 const num1 = 100;
 const num2 = 50;
-let val;
+let calc;
 
 // Simple math with numbers
-val = num1 + num2;
-val = num1 * num2;
-val = num1 - num2;
-val = num1 / num2;
-val = num1 % num2;
+calc = num1 + num2;
+calc = num1 * num2;
+calc = num1 - num2;
+calc = num1 / num2;
+calc = num1 % num2;
 
 // Math Object
-val = Math.PI;
-val = Math.E;
-val = Math.round(2.4);
-val = Math.ceil(2.4);
-val = Math.floor(2.8);
-val = Math.sqrt(64);
-val = Math.abs(-3);
-val = Math.pow(8, 2);
-val = Math.min(2, 33, 4, 1, 55, 6, 3, -2);
-val = Math.max(2, 33, 4, 1, 55, 6, 3, -2);
-val = Math.random();
+calc = Math.PI;
+calc = Math.E;
+calc = Math.round(2.4);
+calc = Math.ceil(2.4);
+calc = Math.floor(2.8);
+calc = Math.sqrt(64);
+calc = Math.abs(-3);
+calc = Math.pow(8, 2);
+calc = Math.min(2, 33, 4, 1, 55, 6, 3, -2);
+calc = Math.max(2, 33, 4, 1, 55, 6, 3, -2);
+calc = Math.random();
 
-val = Math.floor(Math.random() * 20 + 1);
+calc = Math.floor(Math.random() * 20 + 1);
 
-console.log(val);
+console.log(calc);
