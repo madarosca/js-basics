@@ -5,7 +5,7 @@ const set1 = new Set();
 // Add values to set
 set1.add(100);
 set1.add('A string');
-set1.add({name: 'John'});
+set1.add({ name: 'John' });
 set1.add(true);
 set1.add(100);
 
@@ -29,7 +29,7 @@ set1.add(100);
 
 // ITERATING THROUGH SETS
 
-// For..of 
+// For..of
 // for(let item of set1) {
 //   console.log(item);
 // }
