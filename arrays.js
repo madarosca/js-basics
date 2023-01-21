@@ -36,17 +36,17 @@ val = numbers.indexOf(36);
 val = numbers.concat(numbers2);
 
 // Sorting arrays
-val = fruit.sort();
+// val = fruit.sort();
 // val = numbers.sort();
 
 // // Use the "compare function"
-// val = numbers.sort(function(x, y){
-//   return x - y;
+// val = numbers.sort(function (x, y) {
+// 	return x - y;
 // });
 
 // // Reverse sort
-// val = numbers.sort(function(x, y){
-//   return y - x;
+// val = numbers.sort(function (x, y) {
+// 	return y - x;
 // });
 
 // Find

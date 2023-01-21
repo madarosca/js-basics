@@ -28,7 +28,7 @@ example = parseFloat('100.30');
 // Output
 // console.log(example);
 // console.log(typeof example);
-// //console.log(example.length);
+// console.log(example.length);
 // console.log(example.toFixed(2));
 
 const example1 = String(5);

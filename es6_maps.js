@@ -21,23 +21,23 @@ map1.set(key3, 'Value of key3');
 // ITERATING MAPS
 
 // Loop using for...of to get keys and values
-// for(let [key, value] of map1) {
-//   console.log(`${key} = ${value}`);
-// }
+for (let [key, value] of map1) {
+	console.log(`${key} = ${value}`);
+}
 
 // Iterate keys only
-// for(let key of map1.keys()) {
-//   console.log(key);
+// for (let key of map1.keys()) {
+// 	console.log(key);
 // }
 
 // Iterate values only
-// for(let value of map1.values()) {
-//   console.log(value);
-// }
+for (let value of map1.values()) {
+	console.log(value);
+}
 
 // Loop with forEach
 // map1.forEach((value, key) => {
-//   console.log(`${key} = ${value}`);
+// 	console.log(`${key} = ${value}`);
 // });
 
 // CONVERT TO ARRAYS

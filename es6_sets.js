@@ -29,14 +29,14 @@ set1.add(100);
 
 // ITERATING THROUGH SETS
 
-// For..of
-// for(let item of set1) {
-//   console.log(item);
+// For...of
+// for (let item of set1) {
+// 	console.log(item);
 // }
 
 // ForEach Loop
 // set1.forEach((value) => {
-//   console.log(value);
+// 	console.log(value);
 // });
 
 // CONVERT SET TO ARRAY

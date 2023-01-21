@@ -8,10 +8,10 @@
 // alert(input);
 
 // Confirm
-// if(confirm('Are you sure')){
-//   console.log('YES');
+// if (confirm('Are you sure')) {
+// 	console.log('YES');
 // } else {
-//   console.log('NO');
+// 	console.log('NO');
 // }
 
 let myVal;
@@ -41,7 +41,6 @@ myVal = window.location.search;
 //window.location.reload();
 
 // History Object
-
 // window.history.go(-2);
 // myVal = window.history.length;
 

@@ -21,3 +21,4 @@ function include(filePath) {
 // include('destructuring.js');
 // include('es6_maps.js');
 // include('es6_sets.js');
+// include('module_pattern.js');

@@ -19,9 +19,9 @@ console.log(names.next());
 
 // Generator Example
 // function* sayNames() {
-//   yield 'Jack';
-//   yield 'Jill';
-//   yield 'John';
+// 	yield 'Jack';
+// 	yield 'Jill';
+// 	yield 'John';
 // }
 
 // const sayName = sayNames();

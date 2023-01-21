@@ -3,7 +3,6 @@
 // const sym2 = Symbol('sym2');
 
 // console.log(typeof sym2);
-
 // console.log(Symbol('123') === Symbol('123'));
 // console.log(`Hello ${sym1.toString()}`);
 
@@ -22,8 +21,8 @@ myObj.key4 = 'Prop4';
 // console.log(myObj[KEY2]);
 
 // Symbols are not enumerable in for...in
-// for(let i in myObj) {
-//   console.log(`${i}: ${myObj[i]}`);
+// for (let i in myObj) {
+// 	console.log(`${i}: ${myObj[i]}`);
 // }
 
 // Symbols are ignored by JSON.stringify
