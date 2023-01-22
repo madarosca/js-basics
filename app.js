@@ -6,7 +6,6 @@ function include(filePath) {
 
 // include('arrays.js');
 // include('constructors_and_this.js');
-// include('es6_classes.js');
 // include('functions.js');
 // include('iterators_and_generators.js');
 // include('loops.js');
@@ -19,6 +18,7 @@ function include(filePath) {
 // include('window_object.js');
 // include('symbols.js');
 // include('destructuring.js');
+// include('es6_classes.js');
 // include('es6_maps.js');
 // include('es6_sets.js');
 // include('module_pattern.js');
