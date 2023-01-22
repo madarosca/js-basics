@@ -22,3 +22,4 @@ function include(filePath) {
 // include('es6_maps.js');
 // include('es6_sets.js');
 // include('module_pattern.js');
+// include('exercises.js');
