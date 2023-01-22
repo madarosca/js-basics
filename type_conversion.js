@@ -24,6 +24,7 @@ example = Number([1, 2, 3]);
 
 example = parseInt('100.30');
 example = parseFloat('100.30');
+example = +'123';
 
 // Output
 // console.log(example);

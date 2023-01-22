@@ -75,6 +75,14 @@ const double = (arr) => {
 };
 console.log('double of each array element: ', double([1, 2]));
 
+// Find max/min value in array
+const array = [1, 10, -19, 2, 7, 100];
+// array.sort((a, b) => a - b);
+// console.log('max value', array[array.length - 1]); // 100
+// console.log('min value', array[0]); // -19
+console.log('max value', Math.max(...array)); // 100
+console.log('min value', Math.min(...array)); // -19
+
 // Return the index at which the value exists, else return -1
 const linearSearch = (arr, val) => {
 	for (let i = 0; i < arr.length; i++) {
@@ -97,6 +105,10 @@ const countUniqueValues = (arr) => {
 	return i + 1;
 };
 console.log('how many unique values: ', countUniqueValues([1, 2, 2, 5, 7, 7, 99]));
+
+// Get a random value from an array
+const mixedArray = ['fatfish', 'fish', 24, 'hello', 'world'];
+const getRandomValue = (array) => array[Math.floor(Math.random() * array.length)];
 
 // Return first pair of numbers in array which add to 0
 const sumZero = (arr) => {
@@ -171,6 +183,31 @@ const factorial = (n) => {
 	return n * factorial(n - 1);
 };
 console.log('factorial: ', factorial(3));
+
+// Flatten multi-layer arrays
+const multiDimensionalArray = [1, [2, [3, [4, [5]]]]];
+const flattenArray = (array) =>
+	array.reduce((res, it) => {
+		return res.concat(Array.isArray(it) ? flattenArray(it) : it);
+	}, []);
+console.log(flattenArray(array)); // [1, 2, 3, 4, 5]
+
+// console.log(array.flat(Infinity)) // [1, 2, 3, 4, 5]
+
+// Check if an array of objects contains a value
+
+const myOtherArray = [{ name: 'fatfish' }, { name: 'hello' }, { name: 'world' }];
+const foundIndex = myOtherArray.findIndex((it) => it.name === 'hello'); // 1
+
+// Array includes
+const itemsArray = ['fatfish', 'medium', 'fe'];
+const condition = 'fatfish';
+if (itemsArray.includes(condition)) {
+	console.log('hello world'); // hello world
+}
+
+// Initialize an array of a fixed length and each item is “fatfish”
+const initializedArray = Array(5).fill('fatfish');
 
 // This
 const person = {
