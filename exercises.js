@@ -177,10 +177,26 @@ const person = {
 	firstName: 'John',
 	lastName: 'Doe',
 	id: 5566,
-	fullName: function () {
-		return this.firstName + ' ' + this.lastName;
+	fullName: () => this.firstName + ' ' + this.lastName,
+};
+
+const myObject = {
+	foo: 'bar',
+	func: function () {
+		var self = this;
+		console.log('outer func:  this.foo = ' + this.foo);
+		console.log('outer func:  self.foo = ' + self.foo);
+		(function () {
+			console.log('inner func:  this.foo = ' + this.foo);
+			console.log('inner func:  self.foo = ' + self.foo);
+		})();
 	},
 };
+myObject.func();
+//outer func:  this.foo = bar
+//outer func:  self.foo = bar
+//inner func:  this.foo = undefined
+//inner func:  self.foo = bar
 
 // Callback
 // const clock = () => {
@@ -211,10 +227,20 @@ myPromise.then(
 const myAsyncFunction = async () => {
 	return 'Hello';
 };
-// vs Promise
+// same as with Promise
 const myPromiseFunction = () => {
 	return Promise.resolve('Hello');
 };
+
+const loadData = async () => {
+	try {
+		const data = JSON.parse(await getJSON());
+		console.log(data);
+	} catch (e) {
+		console.log(e);
+	}
+};
+loadData();
 
 const myAsyncDisplay = async () => {
 	const myPromise = new Promise(() => {
@@ -230,8 +256,7 @@ const myAsyncDisplay = async () => {
 myAsyncDisplay();
 
 // Event Loop
-console.log('Event Loop: Hi');
-setTimeout(function callback() {
-	console.log('Event Loop: callback');
-}, 5000);
-console.log('Event Loop: Bye');
+console.log('Event Loop: 1');
+setTimeout(() => console.log('Event Loop: 2'), 3000);
+setTimeout(() => console.log('Event Loop: 4'), 0);
+console.log('Event Loop: 3');
