@@ -6,15 +6,17 @@ function include(filePath) {
 
 // include('arrays.js');
 // include('constructors_and_this.js');
-// include('decorator_pattern.js');
 // include('destructuring.js');
 // include('es6_classes.js');
 // include('es6_maps.js');
 // include('es6_sets.js');
 // include('functions.js');
 // include('iterators_and_generators.js');
+// include('js_patterns.decorator.js');
+// include('js_patterns.factory.js');
+// include('js_patterns.module.js');
+// include('js_patterns.singleton.js');
 // include('loops.js');
-// include('module_pattern.js');
 // include('numbers.js');
 // include('prototypal_inheritance.js');
 // include('prototypes.js');

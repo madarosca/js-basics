@@ -5,57 +5,56 @@ const str = 'Hello there my name is Brad';
 const tags = 'web design,web development,programming';
 
 let value;
-
 value = firstName + lastName;
 
 // Concatenation
-value = firstName + ' ' + lastName;
+value = firstName + ' ' + lastName; // William Johnson
 
-// Append
-value = 'Brad ';
-value += 'Traversy';
+// // concat()
+// value = firstName.concat(' ', lastName); // William Johnson
 
-value = 'Hello, my name is ' + firstName + ' and I am ' + age;
+// // Append
+// value = 'Brad ';
+// value += 'Traversy'; // Brad Traversy
+// value = 'Hello, my name is ' + firstName + ' and I am ' + age;
 
-// Escaping
-value = "That's awesome, I can't wait";
+// // Escaping
+// value = "That's awesome, I can't wait"; // That's awesome, I can't wait
 
-// Length
-value = firstName.length;
+// // Length
+// value = firstName.length; // 7
 
-// concat()
-value = firstName.concat(' ', lastName);
+// // Change case
+// value = firstName.toUpperCase(); // WILLIAM
+// value = firstName.toLowerCase(); // william
 
-// Change case
-value = firstName.toUpperCase();
-value = firstName.toLowerCase();
+// value = firstName[2]; // l
 
-value = firstName[2];
+// // indexOf()
+// value = firstName.indexOf('l'); // 2
+// value = firstName.lastIndexOf('l'); // 3
 
-// indexOf()
-value = firstName.indexOf('l');
-value = firstName.lastIndexOf('l');
+// // charAt()
+// value = firstName.charAt('2'); // l
 
-// charAt()
-value = firstName.charAt('2');
-// Get last char
-value = firstName.charAt(firstName.length - 1);
+// // Get last char
+// value = firstName.charAt(firstName.length - 1); // m
 
-// substring()
-value = firstName.substring(0, 4);
+// // substring()
+// value = firstName.substring(0, 4); // Will
 
-// slice()
-value = firstName.slice(0, 4);
-value = firstName.slice(-3);
+// // slice()
+// value = firstName.slice(0, 4); // Will
+// value = firstName.slice(-3); // iam
 
-// split()
-value = str.split(' ');
-value = tags.split(',');
+// // split()
+// value = str.split(' '); // ['Hello', 'there', 'my', 'name', 'is', 'Brad']
+// value = tags.split(','); // ['web design', 'web development', 'programming']
 
-// replace()
-value = str.replace('Brad', 'Jack');
+// // replace()
+// value = str.replace('Brad', 'Jack'); // Hello there my name is Jack
 
-// includes()
-value = str.includes('foo');
+// // includes()
+// value = str.includes('foo'); // false
 
 console.log(value);
