@@ -7,29 +7,29 @@ const mixed = [22, 'Hello', true, undefined, null, { a: 1, b: 1 }, new Date()];
 let val;
 
 // Get array length
-val = numbers.length;
+val = numbers.length; // 7
 // Check if is array
-val = Array.isArray(numbers);
+val = Array.isArray(numbers); // true
 // Get single value
-val = numbers[3];
-val = numbers[0];
+val = numbers[3]; // 23
 // Insert into array
-numbers[2] = 100;
+numbers[2] = 100; // [43, 56, 100, 23, 44, 36, 5]
 // Index of - Returns the first index at which a given element can be found in the array, or -1 if it is not present
-val = numbers.indexOf(36);
+val = numbers.indexOf(36); // 5
 // Last index of - Returns the last index at which a given element can be found in the array, or -1 if it is not present
-val = fruits.lastIndexOf('orange');
-// Output: 4
+val = fruits.lastIndexOf('blue'); // -1
 
 // // To string - Returns a string representing the array and its elements
 // fruits.toString();
 // Output: "banana,apple,orange,mango"
 
-// Push - Adds an element to the end of an array
+// // Push - Adds an element to the end of an array
 // numbers.push(250);
+// Output: [43, 56, 33, 23, 44, 36, 5, 250]
 
 // // Unshift - Adds an element to the beginning of an array
 // numbers.unshift(120);
+// Output: [120, 43, 56, 33, 23, 44, 36, 5, 250]
 
 // // Pop - Removes and returns the last element of an array
 // numbers.pop();

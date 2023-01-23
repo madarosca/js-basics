@@ -26,12 +26,12 @@ class OtherPerson {
 
 const anne = new OtherPerson('Anne', 'Williams', '11-13-1980');
 console.log('Anne: ', anne);
-console.log(anne.greeting());
+console.log(anne.greeting()); // Hello there Anne Williams
 anne.getsMarried('Thompson');
 console.log('married: ', anne);
-console.log(OtherPerson.addNumbers(1, 2));
+console.log(OtherPerson.addNumbers(1, 2)); // 3
 
-// Default constructor: When no constructor is written, Java provides a no-argument default constructor, and the instance variables are set to their default values (0 for int and double, null for objects like String).
+// Default constructor: When no constructor is written, js provides a no-argument default constructor, and the instance variables are set to their default values (0 for int and double, null for objects like String).
 class Alien {
 	constructor() {
 		this.fullName = 'ET';
@@ -54,7 +54,7 @@ class Alien {
 
 const alien = new Alien();
 console.log('Alien: ', alien);
-console.log(alien.greeting());
+console.log(alien.greeting()); // Hello there ET from planet Mars
 alien.getsHumanized('John Doe', 'Earth');
 console.log('humanized: ', alien);
-console.log(alien.addAliens(1, 2));
+console.log(alien.addAliens(1, 2)); // alien.addAliens is not a function

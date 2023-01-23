@@ -1,7 +1,6 @@
 // Person constructor
 function Person(name, dob) {
 	this.name = name;
-	// this.age = age;
 	this.birthday = new Date(dob);
 	this.calculateAge = function () {
 		const diff = Date.now() - this.birthday.getTime();
@@ -10,10 +9,9 @@ function Person(name, dob) {
 	};
 }
 
-// const brad = new Person('Brad', 36);
-// const john = new Person('John', 30);
-
-// console.log(john.age);
+const john = new Person('John', 30);
+console.log(john.name); // John
+console.log(john.age); // undefined
 
 const brad = new Person('Brad', '9-10-1981');
-console.log(brad.calculateAge());
+console.log(brad.calculateAge()); // 41

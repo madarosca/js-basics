@@ -4,8 +4,8 @@ const isPalindrome = (string) => {
 
 	return parsedString === parsedString.split('').reverse().join('');
 };
-console.log('isPalindrome: ', isPalindrome('noon'));
-console.log('isPalindrome: ', isPalindrome('apple'));
+console.log('isPalindrome: ', isPalindrome('noon')); // true
+console.log('isPalindrome: ', isPalindrome('apple')); // false
 
 // Recursive solution
 const isPalindromeRecursive = (str) => {
@@ -15,8 +15,8 @@ const isPalindromeRecursive = (str) => {
 
 	return false;
 };
-console.log('is palindrome recursive: ', isPalindromeRecursive('noon'));
-console.log('is palindrome recursive: ', isPalindromeRecursive('apple'));
+console.log('is palindrome recursive: ', isPalindromeRecursive('noon')); // true
+console.log('is palindrome recursive: ', isPalindromeRecursive('apple')); // false
 
 // Check if string is an anagram
 const validAnagram = (first, second) => {
@@ -24,11 +24,11 @@ const validAnagram = (first, second) => {
 
 	return first.split('').sort().toString() === second.split('').sort().toString();
 };
-console.log('is anagram: ', validAnagram('heart', 'earth'));
+console.log('is anagram: ', validAnagram('heart', 'earth')); // true
 
 // Add all numbers up to specified n
 const addUpTo = (n) => (n * (n + 1)) / 2;
-console.log('add up to n:', addUpTo(5));
+console.log('add up to n:', addUpTo(5)); // 15
 
 // Add all numbers up to n with for loop
 const addUpToNumber = (num) => {
@@ -39,11 +39,11 @@ const addUpToNumber = (num) => {
 	}
 	return total;
 };
-console.log('add up to n with for: ', addUpToNumber(5));
+console.log('add up to n with for: ', addUpToNumber(5)); // 15
 
 // Determine if x is integer
 const isInteger = (x) => (x ^ 0) === x;
-console.log('is it integer: ', isInteger('3'));
+console.log('is it integer: ', isInteger('3')); // false
 
 // Calculate sum of all erray elements
 const sumOfArray = (arr) => {
@@ -54,15 +54,15 @@ const sumOfArray = (arr) => {
 	}
 	return total;
 };
-console.log('sum of array elements with for: ', sumOfArray([1, 3, 5, 7]));
+console.log('sum of array elements with for: ', sumOfArray([1, 3, 5, 7])); // 16
 
 // Calculate sum with reduce
 const sumOfArrayWithReduce = (arr) => arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
-console.log('sum of array elements with reduce: ', sumOfArrayWithReduce([1, 3, 5, 7]));
+console.log('sum of array elements with reduce: ', sumOfArrayWithReduce([1, 3, 5, 7])); // 16
 
 // Calculate product of all erray elements
 const productOfArray = (arr) => arr.reduce((accumulator, currentValue) => accumulator * currentValue, 1);
-console.log('product of array elements with for: ', productOfArray([1, 3, 5, 7]));
+console.log('product of array elements with for: ', productOfArray([1, 3, 5, 7])); // 105
 
 // Calculate double of each array item
 const double = (arr) => {
@@ -73,7 +73,7 @@ const double = (arr) => {
 	}
 	return newArr;
 };
-console.log('double of each array element: ', double([1, 2]));
+console.log('double of each array element: ', double([1, 2])); // [2, 4]
 
 // Find max/min value in array
 const array = [1, 10, -19, 2, 7, 100];
@@ -90,7 +90,7 @@ const linearSearch = (arr, val) => {
 	}
 	return -1;
 };
-console.log('return index of existent value: ', linearSearch(['apple', 'car', 'dog'], 'dog'));
+console.log('return index of existent value: ', linearSearch(['apple', 'car', 'dog'], 'dog')); // 2
 
 // Count how many unique values are in array
 const countUniqueValues = (arr) => {
@@ -104,7 +104,7 @@ const countUniqueValues = (arr) => {
 	}
 	return i + 1;
 };
-console.log('how many unique values: ', countUniqueValues([1, 2, 2, 5, 7, 7, 99]));
+console.log('how many unique values: ', countUniqueValues([1, 2, 2, 5, 7, 7, 99])); // 5
 
 // Get a random value from an array
 const mixedArray = ['fatfish', 'fish', 24, 'hello', 'world'];
@@ -120,7 +120,7 @@ const sumZero = (arr) => {
 		}
 	}
 };
-console.log('first paur that adds to 0: ', sumZero([-4, -3, -2, -1, 0, 1, 2, 5]));
+console.log('first pair that adds to 0: ', sumZero([-4, -3, -2, -1, 0, 1, 2, 5])); // [-2, 2]
 
 // Calculate the sum of the first given elements
 const maxSubarraySum = (arr, num) => {
@@ -134,7 +134,7 @@ const maxSubarraySum = (arr, num) => {
 
 	return maxSum;
 };
-console.log('sum of subarray elements: ', maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 4));
+console.log('sum of subarray elements: ', maxSubarraySum([2, 6, 9, 2, 1, 8, 5, 6, 3], 4)); // 20
 
 // Check if there are duplicates, no matter the number of arguments
 const areThereDuplicates = (...args) => {
@@ -152,7 +152,7 @@ const areThereDuplicates = (...args) => {
 	}
 	return false;
 };
-console.log('check for duplicates in args: ', areThereDuplicates(1, 2, 3, 4, 5));
+console.log('check for duplicates in args: ', areThereDuplicates(1, 2, 3, 4, 5)); // false
 
 // Count down from num to 0
 // // Iterative Version
@@ -182,7 +182,7 @@ const factorial = (n) => {
 	if (n <= 1) return 1;
 	return n * factorial(n - 1);
 };
-console.log('factorial: ', factorial(3));
+console.log('factorial: ', factorial(3)); // 6
 
 // Flatten multi-layer arrays
 const multiDimensionalArray = [1, [2, [3, [4, [5]]]]];
@@ -190,24 +190,21 @@ const flattenArray = (array) =>
 	array.reduce((res, it) => {
 		return res.concat(Array.isArray(it) ? flattenArray(it) : it);
 	}, []);
-console.log(flattenArray(array)); // [1, 2, 3, 4, 5]
-
-// console.log(array.flat(Infinity)) // [1, 2, 3, 4, 5]
+console.log('flatten array with fn: ', flattenArray(multiDimensionalArray)); // [1, 2, 3, 4, 5]
+console.log('flatten array with .flat(): ', multiDimensionalArray.flat(Infinity)); // [1, 2, 3, 4, 5]
 
 // Check if an array of objects contains a value
-
 const myOtherArray = [{ name: 'fatfish' }, { name: 'hello' }, { name: 'world' }];
 const foundIndex = myOtherArray.findIndex((it) => it.name === 'hello'); // 1
 
 // Array includes
 const itemsArray = ['fatfish', 'medium', 'fe'];
-const condition = 'fatfish';
-if (itemsArray.includes(condition)) {
-	console.log('hello world'); // hello world
-}
+const condition = 'medium';
+console.log(itemsArray.includes(condition) ? 'includes condition' : 'does not include condition'); // includes condition
 
 // Initialize an array of a fixed length and each item is “fatfish”
-const initializedArray = Array(5).fill('fatfish');
+const initializedArray = Array(5).fill('arr');
+console.log(initializedArray); // ['arr', 'arr', 'arr', 'arr', 'arr']
 
 // This
 const person = {
@@ -269,15 +266,15 @@ const myPromiseFunction = () => {
 	return Promise.resolve('Hello');
 };
 
-const loadData = async () => {
-	try {
-		const data = JSON.parse(await getJSON());
-		console.log(data);
-	} catch (e) {
-		console.log(e);
-	}
-};
-loadData();
+// const loadData = async () => {
+// 	try {
+// 		const data = JSON.parse(await getJSON());
+// 		console.log(data);
+// 	} catch (e) {
+// 		console.log(e);
+// 	}
+// };
+// loadData();
 
 const myAsyncDisplay = async () => {
 	const myPromise = new Promise(() => {
@@ -297,3 +294,4 @@ console.log('Event Loop: 1');
 setTimeout(() => console.log('Event Loop: 2'), 3000);
 setTimeout(() => console.log('Event Loop: 4'), 0);
 console.log('Event Loop: 3');
+// Output: 1, 3, 4, 2
