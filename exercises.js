@@ -26,6 +26,20 @@ const validAnagram = (first, second) => {
 };
 console.log('is anagram: ', validAnagram('heart', 'earth')); // true
 
+// Generate array with given number of fibonacci sequence
+const fibonacci = (num) => {
+	let result = [0, 1];
+
+	for (let i = 2; i < num; i++) {
+		const prev = result[i - 2];
+		const curr = result[i - 1];
+		result.push(prev + curr);
+	}
+
+	return result;
+};
+console.log('generate fibonacci sequence: ', fibonacci(8)); // [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+
 // Add all numbers up to specified n
 const addUpTo = (n) => (n * (n + 1)) / 2;
 console.log('add up to n:', addUpTo(5)); // 15
@@ -43,6 +57,7 @@ console.log('add up to n with for: ', addUpToNumber(5)); // 15
 
 // Determine if x is integer
 const isInteger = (x) => (x ^ 0) === x;
+Number.isInteger(3); // true
 console.log('is it integer: ', isInteger('3')); // false
 
 // Calculate sum of all erray elements
@@ -74,6 +89,20 @@ const double = (arr) => {
 	return newArr;
 };
 console.log('double of each array element: ', double([1, 2])); // [2, 4]
+
+// Sort array of numbers with duplicate values
+const arrayToSort = [23, 5, 33, 43, 43, 56, 44, 44, 36, 5, 23];
+const sortedArray = arrayToSort.sort((x, y) => x - y);
+console.log('sort array with duplicates: ', sortedArray); // [5, 5, 23, 23, 33, 36, 43, 43, 44, 44, 56]
+
+// Remove duplicates from sorted array
+const setFromArray = new Set(sortedArray);
+const arrayFromSet = Array.from(setFromArray);
+console.log('remove duplicates with set: ', arrayFromSet); // [5, 23, 33, 36, 43, 44, 56]
+
+const arrToSort = ['scale', 'happy', 'strength', 'peace', 'peace', 'happy', 'strength'];
+const removeDuplicatesAndSort = (array) => array.filter((item, index) => array.indexOf(item) === index).sort();
+console.log('remove duplicates with filter: ', removeDuplicatesAndSort(arrToSort)); // ['happy', 'peace', 'scale', 'strength']
 
 // Find max/min value in array
 const array = [1, 10, -19, 2, 7, 100];
