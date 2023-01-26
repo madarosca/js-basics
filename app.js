@@ -14,7 +14,9 @@ function include(filePath) {
 // include('iterators_and_generators.js');
 // include('js_patterns.decorator.js');
 // include('js_patterns.factory.js');
+// include('js_patterns.iterator.js');
 // include('js_patterns.module.js');
+// include('js_patterns.observer.js');
 // include('js_patterns.singleton.js');
 // include('loops.js');
 // include('numbers.js');

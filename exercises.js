@@ -60,7 +60,7 @@ const isInteger = (x) => (x ^ 0) === x;
 Number.isInteger(3); // true
 console.log('is it integer: ', isInteger('3')); // false
 
-// Calculate sum of all erray elements
+// Calculate sum of all array elements
 const sumOfArray = (arr) => {
 	let total = 0;
 
@@ -89,6 +89,10 @@ const double = (arr) => {
 	return newArr;
 };
 console.log('double of each array element: ', double([1, 2])); // [2, 4]
+
+// Calculate double of each array item with reduce
+const doubleEachItem = (arr) => arr.reduce((acc, current) => [...acc, 2 * current], []);
+console.log('doubleEachItem with reduce: ', doubleEachItem([1, 2]));
 
 // Sort array of numbers with duplicate values
 const arrayToSort = [23, 5, 33, 43, 43, 56, 44, 44, 36, 5, 23];
@@ -120,6 +124,23 @@ const linearSearch = (arr, val) => {
 	return -1;
 };
 console.log('return index of existent value: ', linearSearch(['apple', 'car', 'dog'], 'dog')); // 2
+
+// Reduce array of objects given condition
+const arrayOfObjects = [
+	{ firstName: 'John', lastName: 'Doe', age: 35 },
+	{ firstName: 'Jane', lastName: 'Austin', age: 24 },
+	{ firstName: 'Mike', lastName: 'Heck', age: 45 },
+	{ firstName: 'Frankie', lastName: 'Blue', age: 30 },
+	{ firstName: 'Anne', lastName: 'Boleyn', age: 18 },
+];
+
+const reducedArray = arrayOfObjects.reduce((acc, curr) => {
+	if (curr.age < 35) {
+		return [...acc, { name: `${curr.firstName} ${curr.lastName}` }];
+	}
+	return acc;
+}, []); // [{ name: 'Jane Austin' }, { name: 'Frankie Blue' }, { name: 'Anne Boleyn' }];
+console.log('reduce array of objects: ', reducedArray);
 
 // Count how many unique values are in array
 const countUniqueValues = (arr) => {
@@ -235,6 +256,17 @@ console.log(itemsArray.includes(condition) ? 'includes condition' : 'does not in
 const initializedArray = Array(5).fill('arr');
 console.log(initializedArray); // ['arr', 'arr', 'arr', 'arr', 'arr']
 
+// Coercion
+console.log(1 + '2' + '2'); // 122
+console.log(1 + +'2' + '2'); // 32
+console.log(1 + -'1' + '2'); // 02
+console.log(+'1' + '1' + '2'); // 112
+console.log('A' - 'B' + '2'); // NaN2
+console.log('A' - 'B' + 2); // NaN
+// == means that coercion is allowed to happen, while === is not.
+// “10,11” == [[[[10]],11]] // 10,11 == 10,11, and: true
+// "[object Object]" == {name: "test"} // true
+
 // This
 const person = {
 	firstName: 'John',
@@ -324,3 +356,21 @@ setTimeout(() => console.log('Event Loop: 2'), 3000);
 setTimeout(() => console.log('Event Loop: 4'), 0);
 console.log('Event Loop: 3');
 // Output: 1, 3, 4, 2
+
+// Event loop 2
+console.log(1);
+new Promise((resolve) => {
+	console.log(2);
+	return setTimeout(() => {
+		console.log(3);
+		resolve();
+	}, 0);
+});
+setTimeout(function () {
+	console.log(4);
+}, 1000);
+setTimeout(function () {
+	console.log(5);
+}, 0);
+console.log(6);
+// Output: 1 2 6 3 5 4
