@@ -27,4 +27,4 @@ function include(filePath) {
 // include('symbols.js');
 // include('type_conversion.js');
 // include('window_object.js');
-// include('exercises.js');
+include('exercises.js');

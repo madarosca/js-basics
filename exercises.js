@@ -226,13 +226,27 @@ const countDownRecursive = (num) => {
 };
 countDownRecursive(3);
 
-// Calculate factorial of given number
+// Calculate factorial of given number - recursive
 const factorial = (n) => {
 	if (n < 0) return 0;
 	if (n <= 1) return 1;
 	return n * factorial(n - 1);
 };
-console.log('factorial: ', factorial(3)); // 6
+console.log('factorial recursive: ', factorial(3)); // 6
+
+// Calculate factorial of given number - iterative
+const iterativeFactorial = (num) => {
+	let result = 1;
+
+	if (num === 0 || num === 1) {
+		return result;
+	}
+
+	for (let i = 2; i <= num; i++) result = result * i;
+
+	return result;
+};
+console.log('factorial iterative: ', iterativeFactorial(3)); // 6
 
 // Flatten multi-layer arrays
 const multiDimensionalArray = [1, [2, [3, [4, [5]]]]];
@@ -267,6 +281,43 @@ console.log('A' - 'B' + 2); // NaN
 // “10,11” == [[[[10]],11]] // 10,11 == 10,11, and: true
 // "[object Object]" == {name: "test"} // true
 
+// Find the maximum difference between 2 values in array
+// Min value from left and Max value from right
+const inputArray = [2, 7, 9, 5, 10, 33, 5];
+const getDifference = (array) => {
+	let diff = 0;
+	let maxDiff = 0;
+
+	for (let i = 0; i < array.length; i++) {
+		for (let j = i + 1; j < array.length; j++) {
+			diff = array[j] - array[i];
+			if (diff > maxDiff) maxDiff = diff;
+		}
+	}
+	return maxDiff;
+};
+getDifference(inputArray); // 31 // The pair is (2, 33)
+
+// apply() vs call() vs bind()
+const pokemon = {
+	firstname: 'Pika',
+	lastname: 'Chu ',
+	getPokeName: function () {
+		const fullname = `${this.firstname} ${this.lastname}`;
+		return fullname;
+	},
+};
+const pokemonName = function (snack, hobby) {
+	console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+};
+// BIND
+const logPokemon = pokemonName.bind(pokemon); // creates new object and binds pokemon. 'this' of pokemon === pokemon now
+logPokemon('cola', 'bind()'); // Pika Chu loves cola and coding
+// CALL
+pokemonName.call(pokemon, 'snacks', 'call()'); // Pika Chu loves sushi and algorithms
+// APPLY
+pokemonName.apply(pokemon, ['pizza', 'apply()']); // Pika Chu loves pizza and programming
+
 // This
 const person = {
 	firstName: 'John',
@@ -296,59 +347,52 @@ myObject.func();
 // Callback
 // const clock = () => {
 // 	const date = new Date();
-
 // 	console.log(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds());
 // };
 // setInterval(clock, 1000);
 // clock();
 
+/// CALLBACK EXAMPLE:
+const greet = (name, callback) => {
+	console.log(`Hi ${name}`);
+	callback();
+}; // function
+const callMe = () => {
+	console.log('I am callback function');
+}; // callback function
+greet('Peter', callMe); // passing function as an argument
+// Output: Hi Peter
+// I am callback function
+
 // Promise
-const myPromise = new Promise((myResolve, myReject) => {
-	// "Producing Code" (May take some time)
-	myResolve(); // when successful
-	myReject(); // when error
-});
-// "Consuming Code" (Must wait for a fulfilled Promise)
-myPromise.then(
-	(value) => {
-		/* code if successful */
-	},
-	(error) => {
-		/* code if some error */
-	}
+const myPromise = new Promise((resolve, reject) => {
+	setTimeout(() => resolve('promise done'), 1000);
+	setTimeout(() => reject(new Error('Whoops!')), 1500);
+}).then(
+	(value) => console.log(value),
+	(error) => console.log(error)
 );
 
-// Async/Await
-const myAsyncFunction = async () => {
-	return 'Hello';
-};
-// same as with Promise
-const myPromiseFunction = () => {
-	return Promise.resolve('Hello');
-};
+const exPromise = new Promise((resolve) => {
+	setTimeout(() => resolve(3), 2000);
+}).then((value) => {
+	console.log('promised value: ', value);
+});
 
-// const loadData = async () => {
-// 	try {
-// 		const data = JSON.parse(await getJSON());
-// 		console.log(data);
-// 	} catch (e) {
-// 		console.log(e);
-// 	}
-// };
-// loadData();
-
-const myAsyncDisplay = async () => {
-	const myPromise = new Promise(() => {
-		setTimeout(function () {
-			console.log('myAsyncDisplay');
-		}, 1000);
+const myAsync = async (num) => {
+	const myPromise = new Promise((resolve) => {
+		setTimeout(() => resolve(num), 1000);
 	});
 
-	const result = await myPromise;
-
-	return result;
+	try {
+		const result = await myPromise;
+		console.log(`Resolved with async/await ${result}`);
+		return result;
+	} catch (error) {
+		console.log(error);
+	}
 };
-myAsyncDisplay();
+myAsync(5);
 
 // Event Loop
 console.log('Event Loop: 1');
@@ -366,11 +410,7 @@ new Promise((resolve) => {
 		resolve();
 	}, 0);
 });
-setTimeout(function () {
-	console.log(4);
-}, 1000);
-setTimeout(function () {
-	console.log(5);
-}, 0);
+setTimeout(() => console.log(4), 1000);
+setTimeout(() => console.log(5), 0);
 console.log(6);
 // Output: 1 2 6 3 5 4
