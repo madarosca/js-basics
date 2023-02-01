@@ -22,7 +22,7 @@ console.log('is palindrome recursive: ', isPalindromeRecursive('apple')); // fal
 const validAnagram = (first, second) => {
 	if (first.length !== second.length) return false;
 
-	return first.split('').sort().toString() === second.split('').sort().toString();
+	return first.toLowerCase().split('').sort().join('') === second.toLowerCase().split('').sort().join('');
 };
 console.log('is anagram: ', validAnagram('heart', 'earth')); // true
 
@@ -54,6 +54,13 @@ const addUpToNumber = (num) => {
 	return total;
 };
 console.log('add up to n with for: ', addUpToNumber(5)); // 15
+
+// Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5.
+for (let i = 1; i <= 100; i++) {
+	let f = i % 3 == 0,
+		b = i % 5 == 0;
+	console.log(f ? (b ? 'FizzBuzz' : 'Fizz') : b ? 'Buzz' : i);
+}
 
 // Determine if x is integer
 const isInteger = (x) => (x ^ 0) === x;
